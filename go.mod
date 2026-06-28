@@ -1,3 +1,3 @@
-module trace_agent_becacc
+module trace_agent_ed46eb
 
 go 1.19
